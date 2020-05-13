@@ -1,18 +1,315 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/default_color"
+    android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:background="@color/default_color"
+        android:layout_height="match_parent" >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/default_color"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_color"
+                android:layout_weight="1" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tab1"
+                    android:background="@color/default_color"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/default_color"
+                        android:orientation="horizontal" >
+
+                        <ImageButton
+                            android:id="@+id/cane"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="450px"
+                            android:layout_height="450px"
+                            android:background="@drawable/button_round"
+                            android:src="@drawable/cane"
+                            android:padding="1sp"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageButton
+                            android:id="@+id/taraffic"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_width="450px"
+                            android:layout_height="450px"
+                            android:background="@drawable/button_round"
+                            android:src="@drawable/parade"
+                            android:padding="1sp"
+                            android:scaleType="centerCrop" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="경로우대 지정업소"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="30dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:text="교통약자 이동지원"
+                            android:layout_marginLeft="40dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/default_color"
+                        android:orientation="horizontal" >
+
+                        <ImageButton
+                            android:id="@+id/protect"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="450px"
+                            android:layout_height="450px"
+                            android:background="@drawable/button_round"
+                            android:src="@drawable/handicap"
+                            android:padding="1sp"
+                            android:scaleType="centerCrop" />
+
+                        <ImageButton
+                            android:id="@+id/hospital"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_width="450px"
+                            android:layout_height="450px"
+                            android:background="@drawable/button_round"
+                            android:src="@drawable/hospital2"
+                            android:scaleType="fitCenter"
+                            android:padding="1sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="노인·장애인 보호구역"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:text="병원"
+                            android:layout_marginLeft="90dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/default_color"
+                    android:orientation="vertical" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/default_color"
+                        android:orientation="horizontal" >
+
+                        <ImageButton
+                            android:id="@+id/elder"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="450px"
+                            android:layout_height="450px"
+                            android:background="@drawable/button_round"
+                            android:src="@drawable/elderly"
+                            android:padding="1sp"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageButton
+                            android:id="@+id/mineral"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_width="450px"
+                            android:layout_height="450px"
+                            android:background="@drawable/button_round"
+                            android:src="@drawable/mineral"
+                            android:padding="1sp"
+                            android:scaleType="centerCrop" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="경로당"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="80dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:text="약수터"
+                            android:layout_marginLeft="140dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/default_color"
+                        android:orientation="horizontal" >
+
+                        <ImageButton
+                            android:id="@+id/health"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="450px"
+                            android:layout_height="450px"
+                            android:background="@drawable/button_round"
+                            android:src="@drawable/gym"
+                            android:padding="1sp"
+                            android:scaleType="centerCrop" />
+
+                        <ImageButton
+                            android:id="@+id/welfare"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_width="450px"
+                            android:layout_height="450px"
+                            android:background="@drawable/button_round"
+                            android:src="@drawable/help"
+                            android:scaleType="fitCenter"
+                            android:padding="1sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="실외 운동기구"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="50dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:text="복지시설"
+                            android:layout_marginLeft="100dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/default_color"
+                    android:orientation="vertical" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="병원 진료 기록"
+                            android:textColor="#282828"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginLeft="30dp"
+                            android:textSize="25dp" />
+
+                        <ImageButton
+                            android:layout_width="90px"
+                            android:layout_height="90px"
+                            android:id="@+id/plusBtn"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="0sp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="43dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/plus" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+                        <Button
+                            android:background="#e2f0d9"
+                            android:layout_width="180dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="wrap_content"
+                            android:text="진료 기록"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:id="@+id/button1" />
+                        <Button
+                            android:background="#e2f0d9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:text="다음 진료 알림"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:id="@+id/button2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>
