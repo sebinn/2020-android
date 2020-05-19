@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/default_color"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/default_color">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:textColor="#000000"
+            android:textSize="80dp"
+            android:fontFamily="@font/hoonsaemaulundong"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="110dp"
+            android:layout_marginBottom="90dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/default_color"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            android:fontFamily="@font/hoonsaemaulundong"
+            android:textSize="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="57dp" />
+
+        <EditText
+            android:id="@+id/id_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="아이디를 입력해주세요"
+            android:singleLine="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:fontFamily="@font/hoonsaemaulundong"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/default_color"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Passwd"
+            android:fontFamily="@font/hoonsaemaulundong"
+            android:textSize="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="30dp" />
+
+        <EditText
+            android:id="@+id/passwd_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:singleLine="true"
+            android:hint="비밀번호를 입력하세요"
+            android:layout_marginRight="30dp"
+            android:password="true"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/hoonsaemaulundong"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/default_color"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:fontFamily="@font/hoonsaemaulundong"
+            android:textSize="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="40dp" />
+
+        <EditText
+            android:id="@+id/name_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:singleLine="true"
+            android:hint="이름를 입력하세요"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/hoonsaemaulundong"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/default_color"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_btn"
+            android:gravity="center"
+            android:text="회원가입"
+            android:fontFamily="@font/hoonsaemaulundong"
+            android:background="@color/btn_color"
+            android:textSize="20dp"
+            android:paddingHorizontal="30dp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
