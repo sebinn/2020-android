@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android_elder">
+    package="com.example.androidelder">
 
 <!--    <uses-feature android:required="true" android:glEsVersion="0x00020000" />-->
-<!--    <permission android:name="com.example.android_elder.MAPS_RECEIVE"-->
+<!--    <permission android:name="androidelderMAPS_RECEIVE"-->
 <!--        android:label="signature"></permission>-->
 <!--    <uses-permission android:name="android.permission.INTERNET" />-->
 <!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
@@ -29,9 +29,9 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDujm4vOcwBLsdvrlP5sP9M5IM-L8vQ3cU" />
 
-        <activity android:name=".Path_old" android:label="경로우대" />
+        <activity android:name="com.example.androidelder.Path_old" android:label="경로우대" />
         <activity
-            android:name=".SplashActivity"
+            android:name="com.example.androidelder.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.androidelder.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

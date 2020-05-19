@@ -1,4 +1,4 @@
-package com.example.android_elder;
+package com.example.androidelder;
 
 import org.junit.Test;
 

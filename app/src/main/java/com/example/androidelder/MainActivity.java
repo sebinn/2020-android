@@ -1,24 +1,14 @@
-package com.example.android_elder;
+package com.example.androidelder;
 
-import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.Spinner;
 import android.widget.TabHost;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends TabActivity {
 

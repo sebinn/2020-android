@@ -1,4 +1,4 @@
-package com.example.android_elder;
+package com.example.androidelder;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.android_elder", appContext.getPackageName());
+        assertEquals("com.example.androidelder", appContext.getPackageName());
     }
 }

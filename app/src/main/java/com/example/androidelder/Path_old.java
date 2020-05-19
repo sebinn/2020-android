@@ -1,4 +1,4 @@
-package com.example.android_elder;
+package com.example.androidelder;
 
 import android.os.Bundle;
 import android.view.View;
