@@ -2,15 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidelder">
 
-<!--    <uses-feature android:required="true" android:glEsVersion="0x00020000" />-->
-<!--    <permission android:name="androidelderMAPS_RECEIVE"-->
-<!--        android:label="signature"></permission>-->
-<!--    <uses-permission android:name="android.permission.INTERNET" />-->
-<!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
-<!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
-<!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
-<!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
-<!--    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />-->
+    <uses-feature android:required="true" android:glEsVersion="0x00020000" />
+    <permission android:name="androidelderMAPS_RECEIVE"
+        android:label="signature"></permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
 <!--    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>-->
 
@@ -27,12 +27,15 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDujm4vOcwBLsdvrlP5sP9M5IM-L8vQ3cU" />
+            android:value="AIzaSyAzxmH3PE9ZJ7SGtN77wl6S2jNN6HlF7Wc" />
 
-        <activity android:name="com.example.androidelder.Path_old" android:label="경로우대" />
+        <activity android:name="com.example.androidelder.Path_old" android:label="경로우대"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Mineral" android:label="약수터"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name="com.example.androidelder.SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

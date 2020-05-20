@@ -123,6 +123,16 @@ public class MainActivity extends TabActivity {
             }
         });
 
+        //약수터
+        btn_mineral = (ImageButton)findViewById(R.id.mineral);
+        btn_mineral.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(), Mineral.class);
+                startActivity(intent2);
+            }
+        });
+
     }
 }
 //public class MainActivity extends Activity {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="search_list">
+        <item>전체</item>
         <item>센터 검색</item>
         <item>내 위치로 검색</item>
     </string-array>

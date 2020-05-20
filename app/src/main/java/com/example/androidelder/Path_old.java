@@ -56,6 +56,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class Path_old extends AppCompatActivity implements OnMapReadyCallback {
     Spinner spinner;
     RelativeLayout relativeLayout;
+    RelativeLayout relativeLayout2;
     LinearLayout linearlayout;
     GoogleMap gMap;
     MapFragment mapFrag;
@@ -72,7 +73,8 @@ public class Path_old extends AppCompatActivity implements OnMapReadyCallback {
 //        mapFrag = (MapFragment) getFragmentManager().findFragmentById(R.id.path_map);
 //        mapFrag.getMapAsync(this);
 
-        relativeLayout = (RelativeLayout)findViewById(R.id.list_layout);
+        relativeLayout = (RelativeLayout)findViewById(R.id.list_all);
+        relativeLayout2 = (RelativeLayout)findViewById(R.id.list_layout);
         linearlayout = (LinearLayout)findViewById(R.id.path_map_layout);
 
         spinner = (Spinner)findViewById(R.id.search_spin);
@@ -80,6 +82,7 @@ public class Path_old extends AppCompatActivity implements OnMapReadyCallback {
         spinner.setAdapter(adapter);
 
         relativeLayout.setVisibility(View.VISIBLE);
+        relativeLayout2.setVisibility(View.INVISIBLE);
         linearlayout.setVisibility(View.INVISIBLE);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -89,10 +92,17 @@ public class Path_old extends AppCompatActivity implements OnMapReadyCallback {
                 if(i==0){
                     Toast.makeText(Path_old.this,"선택된 아이템 : "+ spinner.getItemAtPosition(i),Toast.LENGTH_SHORT).show();
                     relativeLayout.setVisibility(View.VISIBLE);
+                    relativeLayout2.setVisibility(View.INVISIBLE);
                     linearlayout.setVisibility(View.INVISIBLE);
                 } else if(i==1){
                     Toast.makeText(Path_old.this,"선택된 아이템 : "+ spinner.getItemAtPosition(i),Toast.LENGTH_SHORT).show();
                     relativeLayout.setVisibility(View.INVISIBLE);
+                    relativeLayout2.setVisibility(View.VISIBLE);
+                    linearlayout.setVisibility(View.INVISIBLE);
+                } else if(i==2){
+                    Toast.makeText(Path_old.this,"선택된 아이템 : "+ spinner.getItemAtPosition(i),Toast.LENGTH_SHORT).show();
+                    relativeLayout.setVisibility(View.INVISIBLE);
+                    relativeLayout2.setVisibility(View.INVISIBLE);
                     linearlayout.setVisibility(View.VISIBLE);
                 }
             }
@@ -112,7 +122,7 @@ public class Path_old extends AppCompatActivity implements OnMapReadyCallback {
 
         gMap = map;
 
-        LatLng SEOUL = new LatLng(37.56, 126.97);
+        LatLng SEOUL = new LatLng(35.945273, 126.682142);
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(SEOUL);
@@ -121,6 +131,6 @@ public class Path_old extends AppCompatActivity implements OnMapReadyCallback {
         gMap.addMarker(markerOptions);
 
         gMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
-        gMap.animateCamera(CameraUpdateFactory.zoomTo(10));
+        gMap.animateCamera(CameraUpdateFactory.zoomTo(15));
     }
 }
