@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="경로우대 지정업소"
+            android:text="복지시설"
             android:textSize="30dp"
             android:fontFamily="@font/hoonsaemaulundong"
             android:layout_gravity="center"
@@ -33,7 +33,7 @@
         <Spinner
             android:layout_marginLeft="10dp"
             android:layout_width="165dp"
-            android:id="@+id/spin_path"
+            android:id="@+id/spin_welf"
             android:layout_height="wrap_content"
             android:fontFamily="@font/hoonsaemaulundong"
             android:layout_gravity="center"
@@ -43,7 +43,7 @@
             android:layout_width="200dp"
             android:singleLine="true"
             android:layout_height="wrap_content"
-            android:id="@+id/search_path"
+            android:id="@+id/search_welf"
             android:fontFamily="@font/hoonsaemaulundong"
             android:hint="입력하세요"
             android:gravity="center"
@@ -52,7 +52,7 @@
         <ImageButton
             android:layout_width="30dp"
             android:layout_height="40dp"
-            android:id="@+id/search_icon_path"
+            android:id="@+id/search_icon_welf"
             android:src="@drawable/search"
             android:scaleType="fitCenter"
             android:background="?attr/selectableItemBackground" />
@@ -60,7 +60,6 @@
     </LinearLayout>
 
     <FrameLayout
-        android:id="@+id/tabcontent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1" >
@@ -68,31 +67,31 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/path_list_layout" >
+            android:id="@+id/welf_list_layout" >
 
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:id="@+id/path_list" />
+                android:id="@+id/welf_list" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/path_all_layout" >
+            android:id="@+id/welf_all_layout" >
 
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:id="@+id/path_list_all" />
+                android:id="@+id/welf_list_all" />
         </RelativeLayout>
 
         <LinearLayout
-            android:id="@+id/path_map_layout"
+            android:id="@+id/welf_map_layout"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -100,21 +99,9 @@
             <fragment
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/path_map"
-                tools:context=".Path_old"
+                android:id="@+id/welf_map"
+                tools:context=".Welfare"
                 android:name="com.google.android.gms.maps.SupportMapFragment" />
-
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:textSize="50dp"-->
-<!--                android:text="하이루하이루" />-->
-
-<!--            <Button-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@color/btn_color"-->
-<!--                android:text="이것은 버튼이다." />-->
 
         </LinearLayout>
     </FrameLayout>

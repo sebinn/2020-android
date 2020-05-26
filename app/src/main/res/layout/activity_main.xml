@@ -48,7 +48,7 @@
                             android:scaleType="centerCrop"/>
 
                         <ImageButton
-                            android:id="@+id/taraffic"
+                            android:id="@+id/traffic"
                             android:layout_marginTop="80dp"
                             android:layout_marginLeft="30dp"
                             android:layout_width="450px"

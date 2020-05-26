@@ -33,6 +33,18 @@
             android:theme="@style/NoActionBar"/>
         <activity android:name="com.example.androidelder.Mineral" android:label="약수터"
             android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Health" android:label="실외운동기구"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Traffic" android:label="교통약자 이동지원"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Protect_elder" android:label="노인장애인 보호구역"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Hospital" android:label="병원"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Elder_Group" android:label="경로당"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Welfare" android:label="복지시설"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name="com.example.androidelder.SplashActivity"
             android:theme="@style/NoActionBar">

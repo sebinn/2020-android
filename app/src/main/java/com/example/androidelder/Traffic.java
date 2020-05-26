@@ -53,31 +53,31 @@ import com.google.android.gms.maps.model.MarkerOptions;
 //
 //}
 
-public class Path_old extends AppCompatActivity implements OnMapReadyCallback {
+public class Traffic extends AppCompatActivity implements OnMapReadyCallback {
     Spinner spinner;
     RelativeLayout relativeLayout;
     RelativeLayout relativeLayout2;
     LinearLayout linearlayout;
     GoogleMap gMap;
-    MapFragment mapFrag;
+    SupportMapFragment mapFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_path);
+        setContentView(R.layout.activity_traffic);
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.path_map);
+        mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.traffic_map);
         mapFragment.getMapAsync(this);
 
 //        mapFrag = (MapFragment) getFragmentManager().findFragmentById(R.id.path_map);
 //        mapFrag.getMapAsync(this);
 
-        relativeLayout = (RelativeLayout)findViewById(R.id.path_all_layout);
-        relativeLayout2 = (RelativeLayout)findViewById(R.id.path_list_layout);
-        linearlayout = (LinearLayout)findViewById(R.id.path_map_layout);
+        relativeLayout = (RelativeLayout)findViewById(R.id.traff_all_layout);
+        relativeLayout2 = (RelativeLayout)findViewById(R.id.traff_list_layout);
+        linearlayout = (LinearLayout)findViewById(R.id.traff_map_layout);
 
-        spinner = (Spinner)findViewById(R.id.spin_path);
+        spinner = (Spinner)findViewById(R.id.spin_traff);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.search_list, android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
@@ -90,17 +90,17 @@ public class Path_old extends AppCompatActivity implements OnMapReadyCallback {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 //                Toast.makeText(MainActivity.this,"선택된 아이템 : "+ s.getItemAtPosition(i),Toast.LENGTH_SHORT).show();
                 if(i==0){
-                    Toast.makeText(Path_old.this,"선택된 아이템 : "+ spinner.getItemAtPosition(i),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Traffic.this,"선택된 아이템 : "+ spinner.getItemAtPosition(i),Toast.LENGTH_SHORT).show();
                     relativeLayout.setVisibility(View.VISIBLE);
                     relativeLayout2.setVisibility(View.INVISIBLE);
                     linearlayout.setVisibility(View.INVISIBLE);
                 } else if(i==1){
-                    Toast.makeText(Path_old.this,"선택된 아이템 : "+ spinner.getItemAtPosition(i),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Traffic.this,"선택된 아이템 : "+ spinner.getItemAtPosition(i),Toast.LENGTH_SHORT).show();
                     relativeLayout.setVisibility(View.INVISIBLE);
                     relativeLayout2.setVisibility(View.VISIBLE);
                     linearlayout.setVisibility(View.INVISIBLE);
                 } else if(i==2){
-                    Toast.makeText(Path_old.this,"선택된 아이템 : "+ spinner.getItemAtPosition(i),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Traffic.this,"선택된 아이템 : "+ spinner.getItemAtPosition(i),Toast.LENGTH_SHORT).show();
                     relativeLayout.setVisibility(View.INVISIBLE);
                     relativeLayout2.setVisibility(View.INVISIBLE);
                     linearlayout.setVisibility(View.VISIBLE);

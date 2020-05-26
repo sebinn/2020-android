@@ -1,7 +1,11 @@
 package com.example.androidelder;
 
 import android.app.TabActivity;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -25,7 +29,7 @@ public class MainActivity extends TabActivity {
     //경로우대
     ImageButton btn_cane;
     //교통약지 이동지원
-    ImageButton btn_traf;
+    ImageButton btn_traff;
     //노인장애인 보호구역
     ImageButton btn_protect;
     //병원
@@ -40,6 +44,7 @@ public class MainActivity extends TabActivity {
     ImageButton btn_health;
     //복지센터
     ImageButton btn_welfare;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,7 +138,68 @@ public class MainActivity extends TabActivity {
             }
         });
 
+        //실외 운동기구
+        btn_health = (ImageButton)findViewById(R.id.health);
+        btn_health.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent3 = new Intent(getApplicationContext(), Health.class);
+                startActivity(intent3);
+            }
+        });
+
+        //교통약자 이동지원
+        btn_traff = (ImageButton)findViewById(R.id.traffic);
+        btn_traff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent4 = new Intent(getApplicationContext(), Traffic.class);
+                startActivity(intent4);
+            }
+        });
+
+        //노인장애인 보호구역
+        btn_protect = (ImageButton)findViewById(R.id.protect);
+        btn_protect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent5 = new Intent(getApplicationContext(), Protect_elder.class);
+                startActivity(intent5);
+            }
+        });
+
+        //병원
+        btn_hosp = (ImageButton)findViewById(R.id.hospital);
+        btn_hosp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent6 = new Intent(getApplicationContext(), Hospital.class);
+                startActivity(intent6);
+            }
+        });
+
+        // 경로당
+        btn_elder = (ImageButton)findViewById(R.id.elder);
+        btn_elder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent7 = new Intent(getApplicationContext(), Elder_Group.class);
+                startActivity(intent7);
+            }
+        });
+
+        // 복지시설
+        btn_welfare = (ImageButton)findViewById(R.id.welfare);
+        btn_welfare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent8 = new Intent(getApplicationContext(), Welfare.class);
+                startActivity(intent8);
+            }
+        });
+
     }
+
 }
 //public class MainActivity extends Activity {
 //    Spinner s;
