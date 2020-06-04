@@ -20,7 +20,7 @@
             android:textSize="30dp"
             android:fontFamily="@font/hoonsaemaulundong"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="10dp"/>
     </LinearLayout>
@@ -33,6 +33,9 @@
         android:layout_height="match_parent" >
 
         <fragment
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/health_map"

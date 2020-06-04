@@ -97,6 +97,9 @@
             android:layout_height="match_parent" >
 
             <fragment
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/hospital_map"
