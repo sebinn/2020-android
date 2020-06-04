@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="복지시설"
+            android:text="노인 복지시설"
             android:textSize="30dp"
             android:fontFamily="@font/hoonsaemaulundong"
             android:layout_gravity="center"
