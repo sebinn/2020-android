@@ -64,9 +64,9 @@ public class Path_Detail extends AppCompatActivity {
             discount.setText(cursor.getString(6));
             dis_amount.setText(cursor.getString(7));
             dis_target.setText(cursor.getString(8));
-            weekday.setText(cursor.getString(10));
-            weekend.setText(cursor.getString(12));
-            holiday.setText(cursor.getString(14));
+            weekday.setText(cursor.getString(10) + "~" + cursor.getString(11));
+            weekend.setText(cursor.getString(12)+ "~" + cursor.getString(13));
+            holiday.setText(cursor.getString(14)+ "~" + cursor.getString(15));
             mng_name.setText(cursor.getString(17));
             mng_phoneNum.setText(cursor.getString(18));
         }

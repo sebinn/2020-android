@@ -284,8 +284,8 @@ public class Path_old extends AppCompatActivity implements OnMapReadyCallback, G
 
         gMap.setOnMarkerClickListener(this);
 
-        gMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(37.75827969, 127.1299364606)));
-        gMap.animateCamera(CameraUpdateFactory.zoomTo(10));
+        gMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(37.547928, 127.023432)));
+        gMap.animateCamera(CameraUpdateFactory.zoomTo(14));
     }
 
     public boolean onMarkerClick(Marker marker){
