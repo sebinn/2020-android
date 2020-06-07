@@ -12,7 +12,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.traffic_detail);
+//        setContentView(R.layout.protect_detail);
 //
 //    }
 //}

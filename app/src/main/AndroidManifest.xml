@@ -53,6 +53,10 @@
             android:theme="@style/NoActionBar"/>
         <activity android:name="com.example.androidelder.Traffic_Map" android:label="교통약자 지도"
             android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Protect_Detail" android:label="보호구역 상세설명페이지"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Protect_Map" android:label="보호구역 지도"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name="com.example.androidelder.SplashActivity"
             android:theme="@style/NoActionBar">
