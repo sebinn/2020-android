@@ -1,11 +1,7 @@
 package com.example.androidelder;
 
 import android.app.TabActivity;
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -230,7 +226,7 @@ public class MainActivity extends TabActivity {
 //                    relativeLayout.setVisibility(View.VISIBLE);
 //                    linearlayout.setVisibility(View.INVISIBLE);
 //                } else if(i==1){
-//                    Toast.makeText(MainActivity.this,"선택된 아이템 : "+ s.getItemAtPosition(i),Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(MainActivity.this,"선택된 아이템 : "+ s.getItemAtPosition(i), Toast.LENGTH_SHORT).show();
 //                    relativeLayout.setVisibility(View.INVISIBLE);
 //                    linearlayout.setVisibility(View.VISIBLE);
 //                }
@@ -242,4 +238,4 @@ public class MainActivity extends TabActivity {
 //            }
 //        });
 //    }
-//}
+////}

@@ -45,6 +45,10 @@
             android:theme="@style/NoActionBar"/>
         <activity android:name="com.example.androidelder.Welfare" android:label="복지시설"
             android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Path_Detail" android:label="경로우대 상세설명페이지"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Path_Map" android:label="경로우대 지도"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name="com.example.androidelder.SplashActivity"
             android:theme="@style/NoActionBar">
@@ -54,7 +58,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.androidelder.MainActivity">
+        <activity android:name="com.example.androidelder.MainActivity" android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
