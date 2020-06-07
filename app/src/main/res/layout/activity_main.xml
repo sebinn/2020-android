@@ -264,22 +264,12 @@
                             android:layout_marginTop="40dp"
                             android:layout_marginLeft="30dp"
                             android:textSize="25dp" />
-
-                        <ImageButton
-                            android:layout_width="90px"
-                            android:layout_height="90px"
-                            android:id="@+id/plusBtn"
-                            android:background="?attr/selectableItemBackground"
-                            android:padding="0sp"
-                            android:scaleType="centerCrop"
-                            android:layout_marginTop="43dp"
-                            android:layout_marginLeft="5dp"
-                            android:src="@drawable/plus" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
                         android:orientation="horizontal" >
                         <Button
                             android:background="#e2f0d9"
@@ -301,11 +291,61 @@
                             android:textSize="20dp"
                             android:id="@+id/button2" />
                     </LinearLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/record_list_layout" >
+
+                            <ListView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
+                                android:id="@+id/record_list" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/alarm_list_layout" >
+
+                            <ListView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
+                                android:id="@+id/alarm_list" />
+                        </RelativeLayout>
+                    </FrameLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:orientation="horizontal"
+                        android:layout_weight="2" >
+                        <Button
+                            android:id="@+id/plusBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="100dp"
+                            android:text="진료기록 추가"
+                            android:background="@color/btn_color"
+                            android:gravity="center"
+                            android:layout_gravity="center" />
 
+                        <Button
+                            android:id="@+id/plusBtn2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="알람 추가"
+                            android:background="@color/btn_color"
+                            android:gravity="center"
+                            android:layout_gravity="center" />
                     </LinearLayout>
                 </LinearLayout>
             </FrameLayout>

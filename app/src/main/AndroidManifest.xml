@@ -63,6 +63,14 @@
             android:theme="@style/NoActionBar"/>
         <activity android:name="com.example.androidelder.Welfare_Map" android:label="복지시설 지도"
             android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Record_Detail" android:label="진료기록 상세설명"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Record_Write" android:label="진료기록 기록"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Hospital_Detail" android:label="병원 상세설명페이지"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Hospital_Map" android:label="병원 지도"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name="com.example.androidelder.SplashActivity"
             android:theme="@style/NoActionBar">
@@ -79,6 +87,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".TimeReceiver"/>
+        <receiver android:name=".DeviceBootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".AlarmReceiver" />
     </application>
 
 </manifest>
