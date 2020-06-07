@@ -57,6 +57,10 @@
             android:theme="@style/NoActionBar"/>
         <activity android:name="com.example.androidelder.Protect_Map" android:label="보호구역 지도"
             android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Eldergroup_Detail" android:label="경로당 상세설명페이지"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Eldergroup_Map" android:label="경로당 지도"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name="com.example.androidelder.SplashActivity"
             android:theme="@style/NoActionBar">

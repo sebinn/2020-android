@@ -1,6 +1,7 @@
 package com.example.androidelder;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -22,11 +23,12 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 
-public class Elder_Group extends AppCompatActivity implements OnMapReadyCallback {
+public class Elder_Group extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     Spinner spinner;
     RelativeLayout relativeLayout;
@@ -148,6 +150,29 @@ public class Elder_Group extends AppCompatActivity implements OnMapReadyCallback
                                 sqlDB.close();
 
                                 listView2.setAdapter(arrayAdapter2);
+
+                                listView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                    @Override
+                                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                        String store = "";
+                                        float Lat = 0;
+                                        float Lng = 0;
+                                        sqlDB = myDBHelper.getReadableDatabase();
+                                        Cursor cursor;
+                                        cursor = sqlDB.rawQuery("SELECT * FROM SrCenter WHERE name = '"+ arrayList2.get(i) + "';", null);
+                                        cursor.moveToFirst();
+
+                                        if(cursor.getCount() > 0){
+                                            store = cursor.getString(0);
+                                        }
+                                        cursor.close();
+                                        sqlDB.close();
+
+                                        Intent intent = new Intent(getApplicationContext(), Eldergroup_Detail.class);
+                                        intent.putExtra("store", store);
+                                        startActivity(intent);
+                                    }
+                                });
                             }
 
                         }
@@ -165,28 +190,72 @@ public class Elder_Group extends AppCompatActivity implements OnMapReadyCallback
                 relativeLayout.setVisibility(View.VISIBLE);
             }
         });
+
+        // 전체에서 리스트 뷰 클릭
+        listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String store = "";
+                float Lat = 0;
+                float Lng = 0;
+                sqlDB = myDBHelper.getReadableDatabase();
+                Cursor cursor;
+                cursor = sqlDB.rawQuery("SELECT * FROM SrCenter WHERE name = '"+ arrayList1.get(i) + "';", null);
+                cursor.moveToFirst();
+
+                if(cursor.getCount() > 0){
+                    store = cursor.getString(0);
+                }
+                cursor.close();
+                sqlDB.close();
+
+                Intent intent = new Intent(getApplicationContext(), Eldergroup_Detail.class);
+                intent.putExtra("store", store);
+                startActivity(intent);
+            }
+        });
     }
 
     public void onMapReady(GoogleMap map) {
-
-//        gMap = map;
-//        gMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-//        gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(37.568256, 126.897240), 15));
-
         gMap = map;
+        String name = "";
+        String address = "";
+        String phoneNum = "";
 
-        LatLng SEOUL = new LatLng(35.945273, 126.682142);
-
+        myDBHelper = new myDBHelper(this);
+        sqlDB = myDBHelper.getReadableDatabase();
         MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(SEOUL);
-        markerOptions.title("서울");
-        markerOptions.snippet("한국의 수도");
-        gMap.addMarker(markerOptions);
+        Cursor cursor;
+        cursor = sqlDB.rawQuery("SELECT * FROM SrCenter;", null);
+        cursor.moveToFirst();
+        int count = cursor.getCount();
 
-        gMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
-        gMap.moveCamera(CameraUpdateFactory.zoomTo(15));
+        for(int i=0; i<count; i++){
+            float lat = cursor.getFloat(5);
+            float lng = cursor.getFloat(4);
+            name = cursor.getString(0);
+            address = cursor.getString(2);
+            phoneNum = cursor.getString(3);
+
+            markerOptions.position(new LatLng(lat, lng));
+            markerOptions.snippet("이름: " + name + "\n" + "주소: " + address + "\n" + "전화번호: " + phoneNum);
+            gMap.addMarker(markerOptions);
+            cursor.moveToNext();
+        }
+
+        cursor.close();
+        sqlDB.close();
+
+        gMap.setOnMarkerClickListener(this);
+
+        gMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(35.999311, 127.001461)));
+        gMap.animateCamera(CameraUpdateFactory.zoomTo(15));
     }
 
+    public boolean onMarkerClick(Marker marker){
+        Toast.makeText(this, marker.getSnippet(), Toast.LENGTH_LONG).show();
+        return true;
+    }
 
     public class myDBHelper extends SQLiteOpenHelper {
         public myDBHelper(Context context){
