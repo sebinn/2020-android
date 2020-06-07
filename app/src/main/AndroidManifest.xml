@@ -59,7 +59,9 @@
             android:theme="@style/NoActionBar"/>
         <activity android:name="com.example.androidelder.Eldergroup_Detail" android:label="경로당 상세설명페이지"
             android:theme="@style/NoActionBar"/>
-        <activity android:name="com.example.androidelder.Eldergroup_Map" android:label="경로당 지도"
+        <activity android:name="com.example.androidelder.Welfare_Detail" android:label="복지시설 상세설명페이지"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.example.androidelder.Welfare_Map" android:label="복지시설 지도"
             android:theme="@style/NoActionBar"/>
         <activity
             android:name="com.example.androidelder.SplashActivity"

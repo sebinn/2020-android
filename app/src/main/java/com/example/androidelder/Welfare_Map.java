@@ -18,7 +18,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class Path_Map extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+public class Welfare_Map extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
     GoogleMap gMap;
     SupportMapFragment mapFragment;
 
@@ -39,18 +39,18 @@ public class Path_Map extends AppCompatActivity implements OnMapReadyCallback, G
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.path_map);
+        setContentView(R.layout.welfare_map);
 
         Intent intent = getIntent();
         Lat = intent.getFloatExtra("Lat", 0);
         Lng = intent.getFloatExtra("Lng", 0);
         store = intent.getStringExtra("store");
 
-        name = (TextView)findViewById(R.id.path_map_name);
+        name = (TextView)findViewById(R.id.welfare_map_name);
         name.setText(store);
 
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.path_map2);
+                .findFragmentById(R.id.welfare_map2);
         mapFragment.getMapAsync(this);
 
     }
@@ -60,7 +60,7 @@ public class Path_Map extends AppCompatActivity implements OnMapReadyCallback, G
         myHelper = new myDBHelper(this);
         sqlDB = myHelper.getReadableDatabase();
         Cursor cursor;
-        cursor = sqlDB.rawQuery("SELECT * FROM Prefer_elder WHERE name = '" + store + "';", null);
+        cursor = sqlDB.rawQuery("SELECT * FROM Welfare WHERE name = '" + store + "';", null);
         cursor.moveToFirst();
 
         if(cursor.getCount() > 0){
@@ -78,7 +78,7 @@ public class Path_Map extends AppCompatActivity implements OnMapReadyCallback, G
 
         gMap.setOnMarkerClickListener(this);
         gMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(Lat, Lng)));
-        gMap.animateCamera(CameraUpdateFactory.zoomTo(10));
+        gMap.animateCamera(CameraUpdateFactory.zoomTo(15));
     }
 
     public boolean onMarkerClick(Marker marker){
